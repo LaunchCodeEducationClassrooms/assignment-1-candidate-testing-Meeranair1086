@@ -14,8 +14,6 @@ let correctAnswers=["Sally Ride","True","40","Trajectory"
 ,"3"];
 let candidateAnswers=[];
 
-
-
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 
@@ -30,26 +28,20 @@ function askQuestion() {
     candidateAnswers[i]=input.question("Your Answer: ");
     console.log("Correct Answer: "+correctAnswers[i]+"\n");
     }
-      //console.log(candidateAnswers);
-      
-    }
+        }
   
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   let counter=0;
-  //candidateAnswers.Contains.StringComparer.OrdinalIgnoreCase;
-
-for(let j=0;j<candidateAnswers.length;j++){
-if(candidateAnswers[j].toLowerCase==correctAnswers[j].toLowerCase){
+    for(let j=0;j<candidateAnswers.length;j++){
+        if(candidateAnswers[j].toLowerCase==correctAnswers[j].toLowerCase){
   candidateAnswers.toLowerCase;
   counter++;
 }
-
 }
 console.log(counter);
   let grade;
-
   grade=(counter)/(questions.length)*100;
   console.log(`>>> Overall Grade: ${grade} (${counter} of ${questions.length} responses correct)`);
   if(grade>=80){
@@ -57,8 +49,7 @@ console.log(counter);
   }
   else{
   console.log(">>> Status: FAILED <<<");
-  }
-  
+  }  
   return grade;
 }
 
