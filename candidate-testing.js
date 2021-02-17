@@ -42,7 +42,7 @@ function gradeQuiz(candidateAnswers) {
   counter++;
 }
 }
-console.log(counter);
+
   let grade;
   grade=(counter)/(questions.length)*100;
   console.log(`>>> Overall Grade: ${grade} (${counter} of ${questions.length} responses correct)`);
