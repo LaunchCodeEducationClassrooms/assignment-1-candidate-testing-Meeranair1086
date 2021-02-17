@@ -11,14 +11,14 @@ let candidateName="";
 let question="Who was the first American woman in space? ";
 let correctAnswer="Sally Ride";
 let candidateAnswer="";
-let questions=["1) Who was the first American woman in space?", "2) True or false: 5000 meters = 5 kilometers.", "3) (5 + 3)/2 * 10 = ?", "4) Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?", "5) What is the minimum crew size for the ISS?"];
-let correctAnswers=["Sally Ride", "True", "40", "Trajectory", "3"];
+let questions=[" 1) Who was the first American woman in space? ", " 2) True or false: 5000 meters = 5 kilometers. ", " 3) (5 + 3)/2 * 10 = ?", " 4) Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", " 5) What is the minimum crew size for the ISS? "];
+let correctAnswers=["Sally Ride", "True" , "40", "Trajectory", "3"];
 let candidateAnswers=[];
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 
-candidateName=input.question("Candidate Name: ");
+candidateName=input.question(" Candidate Name: ");
 }
 
 function askQuestion() {
@@ -26,8 +26,8 @@ function askQuestion() {
   
   for(let i=0;i<questions.length;i++){
     console.log(questions[i]);
-    candidateAnswers[i]=input.question("Your Answer: ");
-    console.log("Correct Answer: "+correctAnswers[i]+"\n");
+    candidateAnswers[i]=input.question(" Your Answer: ");
+    console.log(" Correct Answer: "+correctAnswers[i]+"\n");
     }
         }
   
@@ -44,7 +44,7 @@ function gradeQuiz(candidateAnswers) {
 }
   let grade;  
   grade=(counter)/(questions.length)*100;
-  console.log(`>>> Overall Grade: ${grade} (${counter} of ${questions.length} responses correct)`);
+  console.log(`>>> Overall Grade: ${grade}% (${counter} of ${questions.length} responses correct)`);
   if(grade>=80){
     console.log(">>> Status: PASS <<<");
   }
